@@ -1,0 +1,56 @@
+<div class="container-fluid" ng-controller="tablesController as tc">
+    <div class="row">
+        <div class="col-xs-11">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="tab1">
+                        <table>
+                            <thead>
+                                <th class="width">Time</th>
+                                <th>Revenue</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="hour in tc.data">
+                                    <td>{{hour.startTime}}</td>
+                                    <td>{{hour.Formatted_Revenue}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="tab2">
+                        <table>
+                            <thead>
+                                <th class="width">Time</th>
+                                <th>Total Users</th>
+                                <th>Active Users</th>
+                                <th>New Users</th>
+                                <th>Revenue per User</th>
+                                <th>Revenue per Install</th>
+                                <th>Events</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="userHour in tc.data">
+                                    <td>{{userHour.startTime}}</td>
+                                    <td>{{userHour.Total_Users}}</td>
+                                    <td>{{userHour.Active_Users}}</td>
+                                    <td>{{userHour.New_Users}}</td>
+                                    <td>{{userHour.Revenue_Per_User}}</td>
+                                    <td>{{userHour.Revenue_Per_Install}}</td>
+                                    <td>{{userHour.Events}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1 contents">
+            <button class="btn" ui-sref="home"><h4 class="white">Home</h4></button>
+            <button class="btn" ui-sref="tables"><h4 class="white">Tables</h4></button>
+            <button class="btn" ui-sref="charts"><h4 class="white">Charts</h4></button>
+        </div>
+    </div>
+</div>
